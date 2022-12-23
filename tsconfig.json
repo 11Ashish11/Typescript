@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "ES6", //This is compile the typescript to this particular type of javascript
+        "outDir": "build", // The output file of the conversion from typescript to javascript will he here
+        "moduleResolution": "node", // This is done by me to resolve error.
+        "noEmit": false, // If there are some variables which are not getting used, the compiled file will not have it. But if you still want it, set this value to TRUE
+        "allowJs": true, //This is to be used when you also want to allow JS jiles to be included
+        "checkJs": true, //Use this and the above allowJS simulatenously
+    },
+    "include": ["src/**/*"]
+}
