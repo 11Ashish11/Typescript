@@ -21,5 +21,9 @@
 # "outDir": "build",
 
 
+# Ok now compiling for webApplications is not as straight forward.
+# It cannot be done with as simple as just adding some property in tsconfig.js file
+# for compiling for web Applications, we need webpack or parcel
+# Read more about them to know more
 
 
