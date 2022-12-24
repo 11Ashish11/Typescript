@@ -6,6 +6,9 @@
         "noEmit": false, // If there are some variables which are not getting used, the compiled file will not have it. But if you still want it, set this value to TRUE
         "allowJs": true, //This is to be used when you also want to allow JS jiles to be included
         "checkJs": true, //Use this and the above allowJS simulatenously
+        "experimentalDecorators": true, // This is used for Deoraters. Read more about in online or in your Readme File
+        "emitDecoratorMetadata": true, // Helpful with the above Decorater settings. After this also install reflect-metadata npm library
+        "module": "CommonJS", //using this so that we can also use node to run it. ... Just do node index.ts // If you dont do that, then you will get lot of errors
     },
     "include": ["src/**/*"]
 }

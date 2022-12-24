@@ -103,3 +103,57 @@ const b = clone2Generic<String,Number>("ashish"); // So in cases, where we used 
 // keyOf Operator
 // This is kind of similar to instanceOf operator which you are aware of when you used in Java
 // remember that CLMconf instanceof ExportConf ? 
+
+// this below is one great use of TypeOf operator
+
+function getValue<T>(source: T, property: keyof T) {
+    return source[property];
+}
+
+// So now here incase of getValue suppose, you use some keyword which is not of TypeT, 
+// then Typescript will start throwing error
+
+//typeOf Operator
+// This one is a javascript feature only and has nothing to do with typescript
+// It is used to get the type of any variable;
+var Ashish = "String";
+console.log("The typeof ", Ashish, " is  :: ", typeof Ashish);
+
+
+// Indexed Access Types
+// We can get the Type of most properties with this Indexed Access Types
+// You can read more about it here -> https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html
+// This below is one example of Indexed Access Type
+type INDEXED_ACCESS_TYPE = Car["name"];
+
+// OMIT -> Utitlity
+// Suppose you have a requirement where you want all the properties of one particualr interfaces expect 1 or 2 of that
+// In that case, you have use the OMIT utility that this typescript provides.
+// You can check the below link for examples of this method
+// Also there are many other methods too, which typescript provides, You can read about it in this below documentation
+// https://www.typescriptlang.org/docs/handbook/utility-types.html
+
+// There are some other utility methdos also like Partial, Pick, etc. 
+// This can come very handy. You can read more on these in this course
+
+
+
+// DECORATERS --> 
+// This are metadata that you can add to your classes, getter , settters and more
+// @log and @autorization are some of the decoraters we can use
+// Basically at any point if you feel, there is some duplicate code, we can remove that code
+// And use decorater there
+
+// Problem with this is there is different implementation for JS and different implementation for Typescript
+// So if your project has both js and ts code, you may want to skip that part till this is standarized for both
+
+
+// In your tsCofig file, make this settings "experimentalDecoraters" as true to use it
+// Read more about it in this article :: https://www.typescriptlang.org/docs/handbook/decorators.html
+// Topics covered in the course :: 
+/**
+ * 1. Method decorators
+ * 2. Decorater factory
+ * 3. Class Decorator
+ * 4. Property Decorator
+ */

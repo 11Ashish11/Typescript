@@ -1,11 +1,11 @@
 console.log("Hello World !!");
-let x = 5;
+var x = 5;
 // Now if you hover on x, it will tell you that the data type of this is number
 // This is called type inference and this is one of the most powerful feature of typescript
 //Ok but now suppose you have not intialized this x with some number, in that case, use the below syntax.
-let y;
-let z;
-let A;
+var y;
+var z;
+var A;
 // By any we can assign it any data type
 // Other data types which are commonly used are boolean, Date and String[]
 // But now suppose you want to change the datatype of any previosuly defined variable to soemthing else
@@ -13,18 +13,16 @@ let A;
 z = 3;
 // Difference between Class and Interface is, Interface will only get used at compile time and never at runtime
 // You can extend any other interface also by using the extends keyword, same as that in java
-let AudiA8;
+var AudiA8;
 // We can assign it like this 
 AudiA8.availableInIndia = true;
 AudiA8.horsePower = 1500;
-let AudiA6 = {
+var AudiA6 = {
     name: "AudiA6",
     horsePower: 1400,
     price: 1.2,
     availableInIndia: true,
-    launchDate: new Date("01-01-2000"),
-    //By intializing like all the fields should be mandatorily filled. 
-    // Only the ones which are explicitly specified by "?" can be left unfilled.
+    launchDate: new Date("01-01-2000")
 };
 //Enums can be used in the below 2 ways
 var MessiTeams;
@@ -54,7 +52,7 @@ function cloneGeneric(source) {
 function clone2Generic(source) {
     return Object.apply({}, source);
 }
-const b = clone2Generic("ashish"); // So in cases, where we used more than 1 generic Types
+var b = clone2Generic("ashish"); // So in cases, where we used more than 1 generic Types
 // .. we have to specify the types here too.
 // There is one other also main feature of this called generic Constrains.
 // Read about it onine because I am too bored to do it now
